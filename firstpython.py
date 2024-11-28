@@ -19,7 +19,7 @@ print(df.describe())
 # Step 4: Data Visualization
 
 # 1. Distribution of House Prices
-plt.figure(figsize=(8, 6))
+plt.figure(figsize=(10, 9))
 sns.histplot(df['PRICE'], bins=30, kde=True)
 plt.title('Distribution of House Prices')
 plt.xlabel('Price')
@@ -27,13 +27,13 @@ plt.ylabel('Frequency')
 plt.show()
 
 # 2. Correlation Heatmap
-plt.figure(figsize=(10, 8))
+plt.figure(figsize=(11, 18))
 sns.heatmap(df.corr(), annot=True, cmap='coolwarm', fmt='.2f', linewidths=0.5)
 plt.title('Correlation Heatmap')
 plt.show()
 
 # 3. Boxplot for Price vs. Crime Rate
-plt.figure(figsize=(8, 6))
+plt.figure(figsize=(9, 16))
 sns.boxplot(x=df['CRIM'], y=df['PRICE'])
 plt.title('Boxplot: Crime Rate vs. House Prices')
 plt.xlabel('Crime Rate')
